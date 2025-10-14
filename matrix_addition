@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the order of the square matrices (N x N): ");
+    scanf("%d", &n);
+
+    int matrix1[n][n], matrix2[n][n], sum[n][n];
+    printf("Enter elements of first matrix:\n");
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            scanf("%d", &matrix1[i][j]);
+        }
+    }
+    printf("Enter elements of second matrix:\n");
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            scanf("%d", &matrix2[i][j]);
+        }
+    }
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            sum[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
+    }
+
+    printf("Sum of the two matrices:\n");
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            printf("%d ", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
